@@ -13,7 +13,7 @@ var Work = (work) => {
 };
 
 Work.getAllWorkByResumeId = (resumeId, result) => {
-  sql.query("Select company, title, start_year, end_year, description from work where resume_id = ? ", resumeId,
+  sql.query("Select company, title, start_year, end_year, description, years from work where resume_id = ? ", resumeId,
     (err, res) => {
       if (err) {
         console.log("error: ", err);
